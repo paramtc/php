@@ -1,24 +1,20 @@
-<!DOCTYPE html>
 <?php
-$cookie_name = "user";
-$cookie_value = "param";
-setcookie($cookie_name, $cookie_value, time() + (86400), "/");
+$cookie_name="user";
+$cookie_value="google";
+setcookie($cookie_name,$cookie_value,time()+(86400),"/");
+echo"cookie is set<br>";
 ?>
 <html>
-
 <body>
-
-     <?php
-     if (isset($_COOKIE[$cookie_name])) 
-     {
-          echo "Cookie '" . $cookie_name . "' is set! <br>";
-          echo "Value is: " . $_COOKIE[$cookie_name];
-         
-     } else {
-          echo "Cookie named '" . $cookie_name . "' is not set!";
-     }
-     ?>
-
-</body>  
-
+	<?php
+	if(isset($_cookie[$cookie_name]))
+	{
+		echo"cookie is not set";
+	}
+	else
+	{
+		echo"cookie is set";
+	}
+	?>
+</body>
 </html>

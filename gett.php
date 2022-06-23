@@ -1,6 +1,6 @@
 <html>
 <body>
-<form action=<?php echo $_SERVER['PHP_SELF'] ?> Method= POST >
+<form action=<?php echo $_SERVER['PHP_SELF'] ?> Method= GET >
 name:<input type="text" name="name">
 rollno:<input type="text" name="rollno">
 <input type="submit" name="submit">
@@ -10,9 +10,9 @@ rollno:<input type="text" name="rollno">
 
 
 <?php
-	if(isset($_POST['submit']))
+	if(isset($_GET['submit']))
 	{
-		echo $_POST['name'];
-		echo $_POST['rollno'];
+		echo $_GET['name'];
+		echo $_GET['rollno'];
 	}
 ?>
